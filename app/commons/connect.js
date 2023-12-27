@@ -1,11 +1,11 @@
 var mysql = require('mysql');
-
+require("dotenv").config();
 var dbConfig = {
-    host: '127.0.0.1',
-    user:'root',
-    port: 3306,
-    password:'Example@2022#',
-    database:'attendance',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    port: process.env.PORT,
+    password:process.env.DB_PASSWORD,
+    database: process.env.DB_DBNAME,
 };
 
 
